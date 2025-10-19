@@ -1,16 +1,29 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { use, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import axios from "axios";
 
 export default function signupPage() {
+  const router=useRouter()
   const [user, setUser] = React.useState({
     email: "",
     password: "",
     username: "",
   });
+
+  const [buttonDisabled, setButtonDisabled] = React.useState(false);
+
   const onSignup = async () => {};
+
+useEffect(() => {
+  if (user.email.length > 0 && user.password.length > 0 && user.username.length > 0) {
+    setButtonDisabled(false);
+  } else {
+    setButtonDisabled(true);
+  }
+}, [user]);
+
 
   return (
     <div className=" justify-center items-center flex flex-col min-h-screen py-2 ">
