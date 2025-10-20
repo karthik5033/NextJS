@@ -24,6 +24,8 @@ useEffect(() => {
   }
 }, [user]);
 
+useEffect
+
 
   return (
     <div className=" justify-center items-center flex flex-col min-h-screen py-2 ">
