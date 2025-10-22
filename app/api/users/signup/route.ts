@@ -1,9 +1,8 @@
-import { connect } from "@/dbConfig/dbConfig";
-import User from "@/models/userModel";
+import { connect } from "../../../../dbConfig/dbConfig";
+import User from "../../../../models/userModel";
 import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 
-// ...existing code...
 export async function POST(request: NextRequest) {
   try {
     await connect();
@@ -50,4 +49,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-// ...existing code...
