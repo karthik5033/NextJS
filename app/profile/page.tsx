@@ -5,6 +5,7 @@ export default function ProfilePage() {
             <h2>page</h2>
             <br />
             <p>profle page</p>
+            <p>login</p>
         </div>
     );
 }
